@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import Link from '../Link/Link';
+import LIst from '../List/LIst';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/solid'
 
 const Navbar = () => {
-  const [open, setOpen] = useState(false)
+    const [open, setOpen] = useState(false)
     const routes = [
         {
           id: 1,
@@ -31,22 +31,22 @@ const Navbar = () => {
           path: '/blog/:postId'
         }
       ]
-      
     return (
-        <nav className='bg-purple-400 px-6'>
+        <nav className='bg-blue-500'>
+            <div onClick={()=>setOpen(!open)} className='md:hidden ml-5'>
+                <span>{open ? <XMarkIcon className="h-6 w-6 text-white" /> : <Bars3Icon className="h-6 w-6 text-white" />}</span>
+                
+                
+            </div>
 
-          <div onClick={()=>setOpen(!open)} className='md:hidden'>
-            <span>{open == true ? <XMarkIcon className="h-6 w-6 text-blue-500" /> : <Bars3Icon className="h-6 w-6 text-blue-500" />}</span>
-            
-            
-          </div>
-             
-            <ul className={`md:flex absolute md:static pt-4 pl-8 pb-4 bg-purple-400 duration-500 ${open ? 'top-6' : '-top-48'}`}>
+
+            <ul className={`md:flex justify-center drop-shadow-lg absolute md:static duration-500 bg-blue-500 p-5  ${open ? 'top-6' : '-top-48'}`}>
                 {
-                    routes.map(route => <Link 
-                        key={route.id}
-                        route={route}
-                        ></Link>)
+                    routes.map(route=> <LIst
+                    key={route.id}
+                    route={route}
+                    
+                    ></LIst>)
                 }
             </ul>
         </nav>
