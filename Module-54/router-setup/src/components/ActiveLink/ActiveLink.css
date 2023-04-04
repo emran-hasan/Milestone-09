@@ -1,0 +1,9 @@
+.active{
+    background-color: rgb(6, 129, 99);
+    padding: 5px 10px;
+    border-radius: 8px;
+    color: aliceblue;
+}
+.active:hover{
+    color: aliceblue;
+}

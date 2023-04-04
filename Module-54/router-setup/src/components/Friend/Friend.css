@@ -1,0 +1,8 @@
+.friend{
+    border: 2px solid rgb(10, 158, 146);
+    padding: 25px;
+    border-radius: 20px;
+}
+.friend:hover{
+    background-color: #95eccf;
+}
