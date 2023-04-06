@@ -1,0 +1,9 @@
+.single-post{
+    padding: 20px;
+    border: 2px solid blueviolet;
+    border-radius: 20px;
+
+}
+.single-post:hover{
+    background-color: bisque;
+}
