@@ -2,11 +2,15 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App'
 import './index.css'
-import {createBrowserRouter, RouterProvider,} from "react-router-dom";
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
+import Main from './components/Main/Main';
 import Home from './components/Home/Home';
-import Main from './components/Layout/Main';
 import OrderReview from './components/OrderReview/OrderReview';
-import Grandpa from './components/Grandpa/Grandpa';
+import About from './components/About/About';
+
 
 const router = createBrowserRouter([
   {
@@ -14,17 +18,17 @@ const router = createBrowserRouter([
     element:<Main></Main>,
     children:[
       {
-        path: '/',
+        path:'/',
         element:<Home></Home>,
-        loader: () => fetch('tShirts.json')
+        loader: ()=> fetch('products.json')
       },
       {
         path: '/review',
         element:<OrderReview></OrderReview>
       },
       {
-        path:'/grandpa',
-        element:<Grandpa></Grandpa>
+        path:'/about',
+        element:<About></About>
       }
     ]
   }
@@ -32,6 +36,6 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+     <RouterProvider router={router} />
   </React.StrictMode>,
 )

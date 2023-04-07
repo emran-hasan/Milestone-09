@@ -1,0 +1,13 @@
+.product{
+    border: 2px solid lightblue;
+    border-radius: 20px;
+    padding: 20px;
+}
+.btn-buy{
+    background-color: #bbb826;
+    border: none;
+    color: aliceblue;
+}
+.btn-buy:hover{
+    background-color: #85831b;
+}
